@@ -3,23 +3,31 @@ public class ReverseString {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		String blogName = "how to do in java dot com";
-		 
-		//spilt on white space
-		String[] tokens = blogName.split(" ");
-		 
-		//It will store reversed words 
-		StringBuffer finalString = new StringBuffer();
-		 
-		//Loop all words and reverse them
-		for (String token : tokens) {
-		    String reversed = new StringBuffer(token).reverse().toString();
-		    finalString.append(reversed);
-		    finalString.append(" ");
+		String str = "Watermelon";
+		reverseString(str);
+		reverseString2(str);
+		System.out.println("reverse string 3: " + reverseString3(str));
+	}
+	
+	public static void reverseString(String s1) {
+		String reverse = "";
+		for(int i = s1.length()-1; i >= 0; i--) {
+			reverse =  reverse + s1.charAt(i);
 		}
-		 
-		//Check final string
-		System.out.println(finalString.toString()); 
+		System.out.println("Reverse string 1: " + reverse);
+	}
+	
+	public static void reverseString2(String s2) {
+		StringBuffer sb = new StringBuffer(s2);
+		sb.reverse();
+		System.out.println("Reverse string 2 with reverse method : " + sb);
+	}
+	
+	public static String reverseString3(String s3) {
+		if(s3.isEmpty()) {
+			return s3;
+		}
+		return reverseString3(s3.substring(1)) + s3.charAt(0);
 	}
 
 }
