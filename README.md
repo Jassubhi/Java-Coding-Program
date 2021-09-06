@@ -1,3 +1,3 @@
 # Java-Coding-Program
 
-Please go to Java-Coding-Program -> src
+Please go to Java-Coding-Program -> Code Practice -> src
